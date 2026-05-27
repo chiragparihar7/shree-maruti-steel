@@ -5,11 +5,7 @@ import Link from "next/link";
 
 import { Phone, Mail, MapPin, ArrowRight } from "lucide-react";
 
-import {
-  FaFacebookF,
-  FaInstagram,
-  FaLinkedinIn,
-} from "react-icons/fa";
+import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -36,7 +32,6 @@ const Footer = () => {
             className="group flex items-center gap-3 bg-orange-500 hover:bg-orange-600 px-8 py-5 rounded-2xl text-white font-bold uppercase tracking-[2px] transition-all duration-300 shadow-[0_0_40px_rgba(249,115,22,0.25)]"
           >
             Get Free Quote
-
             <ArrowRight
               size={18}
               className="group-hover:translate-x-1 transition-all duration-300"
@@ -58,26 +53,19 @@ const Footer = () => {
                   height={110}
                   className="object-contain bg-white rounded-xl p-1"
                 />
-
-              
               </div>
             </Link>
 
             {/* Description */}
             <p className="text-zinc-400 leading-relaxed mt-8 text-[15px]">
-              Leading manufacturers, suppliers & stockists of
-              stainless steel pipes, fittings, flanges,
-              industrial valves, hardware tools & raw materials
-              across India.
+              Leading manufacturers, suppliers & stockists of stainless steel
+              pipes, fittings, flanges, industrial valves, hardware tools & raw
+              materials across India.
             </p>
 
             {/* Social Icons */}
             <div className="flex items-center gap-4 mt-8">
-              {[
-                FaFacebookF,
-                FaInstagram,
-                FaLinkedinIn,
-              ].map((Icon, index) => (
+              {[FaFacebookF, FaInstagram, FaLinkedinIn].map((Icon, index) => (
                 <a
                   key={index}
                   href="#"
@@ -94,34 +82,54 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-xl font-bold uppercase mb-8 relative inline-block">
+            <h3 className="relative mb-8 inline-block text-xl font-bold uppercase">
               Quick Links
-
-              <span className="absolute -bottom-2 left-0 w-14 h-[3px] bg-orange-500 rounded-full"></span>
+              <span className="absolute -bottom-2 left-0 h-[3px] w-14 rounded-full bg-orange-500"></span>
             </h3>
 
             <div className="flex flex-col gap-5">
               {[
-                "Home",
-                "About Us",
-                "Products",
-                "Industries",
-                "Calculators",
-                "Certifications",
-                "Contact",
+                {
+                  name: "Home",
+                  href: "/",
+                },
+                {
+                  name: "About Us",
+                  href: "/about",
+                },
+                {
+                  name: "Products",
+                  href: "/products",
+                },
+                {
+                  name: "Industries",
+                  href: "/industries",
+                },
+                {
+                  name: "Calculators",
+                  href: "/calculators",
+                },
+                {
+                  name: "Certifications",
+                  href: "/certifications",
+                },
+                {
+                  name: "Contact",
+                  href: "/contact",
+                },
               ].map((item, index) => (
                 <Link
                   key={index}
-                  href="/"
-                  className="group flex items-center gap-3 text-zinc-400 hover:text-orange-500 transition-all duration-300"
+                  href={item.href}
+                  className="group flex items-center gap-3 text-zinc-400 transition-all duration-300 hover:text-orange-500"
                 >
                   <ArrowRight
                     size={15}
-                    className="group-hover:translate-x-1 transition-all duration-300"
+                    className="transition-all duration-300 group-hover:translate-x-1"
                   />
 
-                  <span className="uppercase tracking-[2px] text-sm font-medium">
-                    {item}
+                  <span className="text-sm font-medium uppercase tracking-[2px]">
+                    {item.name}
                   </span>
                 </Link>
               ))}
@@ -132,7 +140,6 @@ const Footer = () => {
           <div>
             <h3 className="text-xl font-bold uppercase mb-8 relative inline-block">
               Products
-
               <span className="absolute -bottom-2 left-0 w-14 h-[3px] bg-orange-500 rounded-full"></span>
             </h3>
 
@@ -167,7 +174,6 @@ const Footer = () => {
           <div>
             <h3 className="text-xl font-bold uppercase mb-8 relative inline-block">
               Contact Info
-
               <span className="absolute -bottom-2 left-0 w-14 h-[3px] bg-orange-500 rounded-full"></span>
             </h3>
 
@@ -175,10 +181,7 @@ const Footer = () => {
               {/* Address */}
               <div className="flex gap-4">
                 <div className="min-w-[50px] h-[50px] rounded-xl bg-zinc-900 border border-zinc-800 flex items-center justify-center">
-                  <MapPin
-                    size={20}
-                    className="text-orange-500"
-                  />
+                  <MapPin size={20} className="text-orange-500" />
                 </div>
 
                 <div>
@@ -187,9 +190,8 @@ const Footer = () => {
                   </h4>
 
                   <p className="text-zinc-400 leading-relaxed text-sm">
-                    Shop No. 01, Jindal Colony, Opp. JK
-                    Dharam Kata, Main Dadri Road,
-                    Surajpur, Greater Noida, U.P.
+                    Shop No. 01, Jindal Colony, Opp. JK Dharam Kata, Main Dadri
+                    Road, Surajpur, Greater Noida, U.P.
                   </p>
                 </div>
               </div>
@@ -197,10 +199,7 @@ const Footer = () => {
               {/* Phone */}
               <div className="flex gap-4">
                 <div className="min-w-[50px] h-[50px] rounded-xl bg-zinc-900 border border-zinc-800 flex items-center justify-center">
-                  <Phone
-                    size={20}
-                    className="text-orange-500"
-                  />
+                  <Phone size={20} className="text-orange-500" />
                 </div>
 
                 <div>
@@ -218,10 +217,7 @@ const Footer = () => {
               {/* Email */}
               <div className="flex gap-4">
                 <div className="min-w-[50px] h-[50px] rounded-xl bg-zinc-900 border border-zinc-800 flex items-center justify-center">
-                  <Mail
-                    size={20}
-                    className="text-orange-500"
-                  />
+                  <Mail size={20} className="text-orange-500" />
                 </div>
 
                 <div>
@@ -241,8 +237,8 @@ const Footer = () => {
         {/* Bottom */}
         <div className="border-t border-zinc-800 py-6 flex flex-col lg:flex-row items-center justify-between gap-4">
           <p className="text-zinc-500 text-sm text-center lg:text-left tracking-[1px]">
-            © {new Date().getFullYear()} Shree Maruti Steel.
-            All Rights Reserved.
+            © {new Date().getFullYear()} Shree Maruti Steel. All Rights
+            Reserved.
           </p>
 
           <p className="text-zinc-600 text-sm uppercase tracking-[3px]">
