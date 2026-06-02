@@ -24,14 +24,14 @@ const Navbar = () => {
   return (
     <>
       <nav className="h-20 flex items-center justify-center">
-        <div className="w-full max-w-[1280px] flex items-center justify-between">
+        <div className="w-full max-w-[1280px] flex items-center justify-between  lg:px-8">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 group shrink-0">
             <Image
-              src="/logo.png"
+              src="/logo.jpeg"
               alt="Shree Maruti Steel"
-              width={130}
-              height={110}
+              width={80}
+              height={35}
               priority
               className="object-contain rounded-xl group-hover:scale-105 transition-all duration-300"
             />

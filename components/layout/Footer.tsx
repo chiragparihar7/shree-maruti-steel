@@ -47,10 +47,10 @@ const Footer = () => {
             <Link href="/" className="inline-block">
               <div className="flex items-center gap-4">
                 <Image
-                  src="/logo.png"
+                  src="/logo.jpeg"
                   alt="Shree Maruti Steel"
-                  width={130}
-                  height={110}
+                  width={90}
+                  height={40}
                   className="object-contain bg-white rounded-xl p-1"
                 />
               </div>

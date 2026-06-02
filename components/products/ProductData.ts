@@ -15,58 +15,83 @@ import {
   Cog,
   Shield,
   Drill,
+  Thermometer,
 } from "lucide-react";
 
 export const products = [
   {
     title: "Stainless Steel Pipes",
     description:
-      "Premium stainless steel welded & seamless pipes confirming to ASTM A312 / A213 standards.",
+      "Premium stainless steel welded & seamless pipes conforming to ASTM A312 / A213 standards for industrial applications.",
     icon: Cylinder,
-    image:
-      "https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=1600&auto=format&fit=crop",
+    image: "/Product/product1.jpg",
+
     specs: {
       size: '1/2" to 24"',
       grades: ["304", "304L", "309", "316", "316L"],
-      make: ["Venus", "Remi", "Sumitoma Nippon", "Suraj", "Ratnamani"],
+      make: [
+        "Venus",
+        "Remi",
+        "Sumitoma Nippon",
+        "Suraj",
+        "Ratnamani",
+      ],
     },
   },
 
   {
     title: "M.S. / G.I. ERW Pipes",
     description:
-      "Industrial ERW pipes including square & rectangular pipes as per IS standards.",
+      "Industrial ERW pipes including square, rectangular and round pipe solutions as per IS standards.",
     icon: Cylinder,
-    image:
-      "https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=1600&auto=format&fit=crop",
+    image: "/Product/product2.jpg",
+
     specs: {
       size: '1/2" to 36"',
-      standards: ["IS1239", "IS3589", "ISS4923", "ASTM A500"],
-      make: ["Tata", "Asian", "Zenith", "Jindal", "Bhushan", "Apollo"],
+      standards: [
+        "IS1239",
+        "IS3589",
+        "ISS4923",
+        "ASTM A500",
+      ],
+      make: [
+        "Tata",
+        "Asian",
+        "Zenith",
+        "Jindal",
+        "Bhushan",
+        "Apollo",
+      ],
     },
   },
 
   {
     title: "C.S. Seamless Pipes",
     description:
-      "Carbon steel ERW & seamless boiler tubes for heavy-duty industrial applications.",
+      "Heavy-duty carbon steel ERW & seamless boiler tubes for industrial and engineering projects.",
     icon: Cylinder,
-    image:
-      "https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?q=80&w=1600&auto=format&fit=crop",
+    image: "/Product/product3.jpg",
+
     specs: {
       size: '1/2" to 36"',
-      standards: ["A106 Grade B", "SA179", "DIN17175", "A333", "API-5L"],
+      standards: [
+        "A106 Grade B",
+        "SA179",
+        "DIN17175",
+        "A333",
+        "API-5L",
+      ],
       make: ["MSL", "ISMT", "JSL"],
     },
   },
 
   {
-    title: "Alloy Steel Seamless Pipes",
+    title: "Alloy Steel Pipes",
     description:
-      "Premium alloy steel seamless pipes suitable for IBR & non-IBR applications.",
+      "Premium alloy steel seamless pipes suitable for IBR & non-IBR industrial applications.",
     icon: Cylinder,
-    image:
-      "https://images.unsplash.com/photo-1513828583688-c52646db42da?q=80&w=1600&auto=format&fit=crop",
+    image: "/Product/product4.jpg",
+
     specs: {
       size: '1/2" to 18"',
       grades: ["P11", "P12", "P22"],
@@ -77,64 +102,70 @@ export const products = [
   {
     title: "Stainless Steel Plates",
     description:
-      "Industrial stainless steel sheets, coils and heavy-duty plates.",
+      "Industrial stainless steel sheets, coils and heavy-duty plates for fabrication industries.",
     icon: LayoutPanelTop,
-    image:
-      "https://images.unsplash.com/photo-1565008447742-97f6f38c985c?q=80&w=1600&auto=format&fit=crop",
+    image: "/Product/product5.jpg",
+
     specs: {
       thickness: "1mm to 100mm",
-      grades: ["304", "304L", "316", "316L", "321", "309", "310S"],
+      grades: [
+        "304",
+        "304L",
+        "316",
+        "316L",
+        "321",
+        "309",
+        "310S",
+      ],
     },
   },
 
   {
-    title: "M.S. / Boiler Steel Plates",
+    title: "Boiler Steel Plates",
     description:
-      "Boiler quality plates, channels, beams and structural steel products.",
+      "Boiler quality steel plates, channels, beams and structural steel products.",
     icon: LayoutPanelTop,
-    image:
-      "https://images.unsplash.com/photo-1581092921461-eab62e97a780?q=80&w=1600&auto=format&fit=crop",
+    image: "/Product/product6.jpg",
+
     specs: {
       thickness: "3mm to 150mm",
-      grades: ["IS2062", "IS2002-62", "ASTM A516 Gr.70/60"],
+      grades: [
+        "IS2062",
+        "IS2002-62",
+        "ASTM A516 Gr.70/60",
+      ],
     },
   },
 
   {
-    title: "M.S. / IBR & Non IBR Materials",
+    title: "S.S. Pipe Fittings",
     description:
-      "Pipe fittings, flanges and industrial piping materials for IBR & non-IBR use.",
-    icon: Cog,
-    image:
-      "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?q=80&w=1600&auto=format&fit=crop",
-    specs: {
-      size: '1" to 20"',
-    },
-  },
-
-  {
-    title: "C.S. Pipe Fittings & Flanges",
-    description:
-      "Carbon steel fittings, flanges and welded industrial connection solutions.",
+      "Stainless steel welded & seamless pipe fittings conforming to A403 / A182F standards.",
     icon: Settings2,
-    image:
-      "https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=1600&auto=format&fit=crop",
-    specs: {
-      standards: ["A234", "A105", "IS2062"],
-      types: ["SORF", "SOFF", "BLRF", "SW", "Weld Neck"],
-    },
-  },
+    image: "/Product/product7.jpg",
 
-  {
-    title: "S.S. Pipe Fittings & Flanges",
-    description:
-      "Stainless steel welded & seamless fittings confirming to A403 / A182F.",
-    icon: Settings2,
-    image:
-      "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1600&auto=format&fit=crop",
     specs: {
       grades: ["304", "316"],
       standards: ["A403", "A182F", "A240"],
+    },
+  },
+
+  {
+    title: "C.S. Pipe Fittings",
+    description:
+      "Carbon steel fittings, flanges and welded industrial connection solutions.",
+    icon: Settings2,
+    image: "/Product/product8.jpg",
+
+    specs: {
+      standards: ["A234", "A105", "IS2062"],
+      types: [
+        "SORF",
+        "SOFF",
+        "BLRF",
+        "SW",
+        "Weld Neck",
+      ],
     },
   },
 
@@ -143,8 +174,8 @@ export const products = [
     description:
       "Ball valves, gate valves, globe valves, safety valves and check valves.",
     icon: CircleGauge,
-    image:
-      "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1600&auto=format&fit=crop",
+    image: "/Product/product9.jpg",
+
     specs: {
       make: [
         "L&T",
@@ -163,8 +194,8 @@ export const products = [
     description:
       "Hydraulic tube fittings for instrumentation & pneumatic control systems.",
     icon: Wrench,
-    image:
-      "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1600&auto=format&fit=crop",
+    image: "/Product/product10.jpg",
+
     specs: {
       materials: ["S.S.", "M.S.", "Brass"],
     },
@@ -175,8 +206,8 @@ export const products = [
     description:
       "Industrial fasteners including washers, bolts, threaded rods and rivets.",
     icon: Bolt,
-    image:
-      "https://images.unsplash.com/photo-1530124566582-a618bc2615dc?q=80&w=1600&auto=format&fit=crop",
+    image: "/Product/product11.jpg",
+
     specs: {
       grades: [
         "304",
@@ -196,57 +227,37 @@ export const products = [
   },
 
   {
-    title: "Industrial Raw Materials",
+    title: "Fire Safety Equipment",
     description:
-      "Manufacturing stockist & suppliers of industrial raw materials and metals.",
-    icon: ShieldCheck,
-    image:
-      "https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=1600&auto=format&fit=crop",
+      "Industrial fire protection systems, PPE safety gear and emergency solutions.",
+    icon: Flame,
+    image: "/Product/product12.jpg",
+
     specs: {
-      materials: [
-        "Carbon Steel",
-        "Nickel Alloy",
-        "Copper",
-        "Brass",
-        "Aluminum",
+      products: [
+        "Fire Extinguishers",
+        "Hydrant Valves",
+        "Hose Pipes",
+        "Safety PPE",
       ],
     },
   },
 
   {
-    title: "Fire Safety Equipment",
+    title: "Hand Tools",
     description:
-      "Industrial fire protection, PPE safety gear and emergency safety solutions.",
-    icon: Flame,
-    image:
-      "https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=1600&auto=format&fit=crop",
-  },
-
-  {
-    title: "Hand Tools & Engineering Tools",
-    description:
-      "Professional industrial hand tools, engineering tools and workshop equipment.",
+      "Professional industrial hand tools and engineering workshop equipment.",
     icon: HardHat,
-    image:
-      "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?q=80&w=1600&auto=format&fit=crop",
-  },
+    image: "/Product/product13.jpg",
 
-  {
-    title: "Pressure Gauges",
-    description:
-      "Industrial pressure gauges, temperature gauges and gauge accessories.",
-    icon: Gauge,
-    image:
-      "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1600&auto=format&fit=crop",
-  },
-
-  {
-    title: "Copper Fittings",
-    description:
-      "Premium copper fittings and industrial piping accessories.",
-    icon: Cable,
-    image:
-      "https://images.unsplash.com/photo-1581092160607-ee22731d8b09?q=80&w=1600&auto=format&fit=crop",
+    specs: {
+      tools: [
+        "Spanners",
+        "Cutting Tools",
+        "Wrenches",
+        "Industrial Kits",
+      ],
+    },
   },
 
   {
@@ -254,43 +265,161 @@ export const products = [
     description:
       "Industrial brass fittings for piping and engineering applications.",
     icon: Pipette,
-    image:
-      "https://images.unsplash.com/photo-1581092160607-ee22731d8b09?q=80&w=1600&auto=format&fit=crop",
+    image: "/Product/product14.jpg",
+
+    specs: {
+      materials: ["Brass"],
+      applications: [
+        "Piping",
+        "Instrumentation",
+        "Engineering",
+      ],
+    },
   },
 
   {
-    title: "Fire Hydrant Valves",
+    title: "Copper Fittings",
     description:
-      "Industrial fire hydrant valves, hose pipes and fire safety accessories.",
-    icon: Shield,
-    image:
-      "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1600&auto=format&fit=crop",
+      "Premium copper fittings and industrial piping accessories.",
+    icon: Cable,
+    image: "/Product/product15.jpg",
+
+    specs: {
+      materials: ["Copper"],
+      applications: [
+        "HVAC",
+        "Industrial Piping",
+        "Engineering",
+      ],
+    },
   },
 
   {
-    title: "Bearing & Bushings",
+    title: "Pressure Gauges",
     description:
-      "Industrial bearings, bushings and precision engineering components.",
+      "Industrial pressure gauges and instrumentation monitoring systems.",
+    icon: Gauge,
+    image: "/Product/product16.jpg",
+
+    specs: {
+      types: [
+        "Pressure Gauge",
+        "Digital Gauge",
+        "Industrial Gauge",
+      ],
+    },
+  },
+
+  {
+    title: "Temperature Gauges",
+    description:
+      "Accurate industrial temperature gauges for monitoring and process control.",
+    icon: Thermometer,
+    image: "/Product/product17.jpg",
+
+    specs: {
+      types: [
+        "Dial Thermometer",
+        "Digital Temperature Gauge",
+        "Industrial Thermometer",
+      ],
+    },
+  },
+
+  {
+    title: "Gauge Accessories",
+    description:
+      "Gauge accessories and instrumentation support products for industries.",
+    icon: Gauge,
+    image: "/Product/product18.jpg",
+
+    specs: {
+      products: [
+        "Gauge Cock",
+        "Syphon",
+        "Needle Valve",
+        "Connectors",
+      ],
+    },
+  },
+
+  {
+    title: "Bearings",
+    description:
+      "Industrial bearings for heavy-duty engineering and machinery systems.",
     icon: Cog,
-    image:
-      "https://images.unsplash.com/photo-1581092921461-eab62e97a780?q=80&w=1600&auto=format&fit=crop",
+    image: "/Product/product19.jpg",
+
+    specs: {
+      types: [
+        "Ball Bearing",
+        "Roller Bearing",
+        "Industrial Bearing",
+      ],
+    },
   },
 
   {
-    title: "Threaded Rods & Rivets",
+    title: "Bushings",
     description:
-      "Heavy-duty threaded rods, rivets and industrial fastening components.",
+      "Precision industrial bushings for engineering and machine applications.",
+    icon: Cog,
+    image: "/Product/product20.jpg",
+
+    specs: {
+      applications: [
+        "Machinery",
+        "Industrial Equipment",
+        "Engineering",
+      ],
+    },
+  },
+
+  {
+    title: "Threaded Rod",
+    description:
+      "Heavy-duty threaded rods for industrial fastening applications.",
     icon: Drill,
-    image:
-      "https://images.unsplash.com/photo-1530124566582-a618bc2615dc?q=80&w=1600&auto=format&fit=crop",
+    image: "/Product/product21.jpg",
+
+    specs: {
+      materials: [
+        "S.S.",
+        "M.S.",
+        "Alloy Steel",
+      ],
+    },
   },
 
   {
-    title: "Industrial Storage Supply",
+    title: "Rivets",
     description:
-      "Bulk industrial inventory, warehouse storage and supply chain solutions.",
-    icon: Warehouse,
-    image:
-      "https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=1600&auto=format&fit=crop",
+      "Industrial rivets and fastening solutions for fabrication industries.",
+    icon: Bolt,
+    image: "/Product/product22.jpg",
+
+    specs: {
+      types: [
+        "Blind Rivets",
+        "Solid Rivets",
+        "Industrial Rivets",
+      ],
+    },
+  },
+
+  {
+    title: "Wire Products",
+    description:
+      "Industrial wire products and metal wire engineering solutions.",
+    icon: ShieldCheck,
+    image: "/Product/product23.jpg",
+
+    specs: {
+      materials: [
+        "S.S. Wire",
+        "Copper Wire",
+        "Industrial Wire",
+      ],
+    },
   },
 ];

@@ -1,186 +1,152 @@
-// components/home/Hero.tsx
-
 "use client";
 
-import Link from "next/link";
 import Image from "next/image";
-
-import { ArrowRight, Phone } from "lucide-react";
+import Link from "next/link";
 
 import { motion } from "framer-motion";
 
+import {
+  ArrowRight,
+  ShieldCheck,
+  BadgeCheck,
+  Phone,
+} from "lucide-react";
+
 const Hero = () => {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-[#fff7f2] via-white to-[#fff3eb] pt-22 lg:pt-20 pb-14">
-      {/* Background Effects */}
-      <div className="absolute top-[-120px] right-[-120px] w-[450px] h-[450px] bg-orange-200/40 blur-[120px] rounded-full" />
+    <section className="relative w-full overflow-hidden bg-black">
+      {/* HERO WRAPPER */}
+      <div className=" relative w-full
+      min-h-[600px]
+      sm:min-h-[650px]
+      lg:min-h-screen ">
+        {/* BACKGROUND IMAGE */}
+        <Image
+          src="/Home/hero_banner.webp"
+          alt="Shree Maruti Steel"
+          fill
+          priority
+          quality={100}
+          className="object-cover object-center"
+        />
 
-      <div className="absolute bottom-[-100px] left-[-100px] w-[350px] h-[350px] bg-orange-100 blur-[120px] rounded-full" />
+        {/* DARK OVERLAY */}
+        <div className="absolute inset-0 bg-black/15 z-10" />
 
-      {/* Grid Pattern */}
-      <div className="absolute inset-0 opacity-[0.03] bg-[linear-gradient(to_right,#000_1px,transparent_1px),linear-gradient(to_bottom,#000_1px,transparent_1px)] bg-[size:80px_80px]" />
+        {/* GRADIENT */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-black/20 to-black/90 z-10" />
 
-      <div className="relative max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
-          {/* Left Content */}
-          <div>
-            {/* Badge */}
-            <motion.div
-              initial={{ opacity: 0, y: 40 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              className="inline-flex items-center gap-3 bg-white border border-orange-200 shadow-lg shadow-orange-100 rounded-full px-6 py-3 mb-8"
-            >
-              <span className="w-3 h-3 bg-orange-500 rounded-full animate-pulse" />
-
-              <span className="text-sm font-bold uppercase tracking-[3px] text-orange-600">
-                Industrial Steel Supplier
-              </span>
-            </motion.div>
-
-            {/* Heading */}
-            <motion.h1
-              initial={{ opacity: 0, y: 40 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.1, duration: 0.5 }}
-              className="text-5xl sm:text-6xl xl:text-7xl font-black uppercase leading-[1.05] text-[#111111]"
-            >
-              Premium
-              <br />
-
-              <span className="text-orange-500">
-                Stainless
-              </span>{" "}
-              Steel
-              <br />
-
-              Products
-            </motion.h1>
-
-            {/* Description */}
-            <motion.p
-              initial={{ opacity: 0, y: 40 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2, duration: 0.5 }}
-              className="text-zinc-600 text-lg lg:text-xl leading-relaxed mt-8 max-w-[650px]"
-            >
-              Leading manufacturers, suppliers &
-              stockists of stainless steel pipes,
-              fittings, flanges, valves and industrial
-              raw materials delivering premium quality
-              solutions across India.
-            </motion.p>
-
-            {/* Buttons */}
-            <motion.div
-              initial={{ opacity: 0, y: 40 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.3, duration: 0.5 }}
-              className="flex flex-wrap items-center gap-5 mt-10"
-            >
-              {/* Primary Button */}
-              <Link
-                href="/products"
-                className="group relative overflow-hidden flex items-center gap-3 bg-orange-500 hover:bg-orange-600 px-8 py-5 rounded-2xl text-white font-bold uppercase tracking-[2px] transition-all duration-300 shadow-[0_15px_40px_rgba(249,115,22,0.35)]"
+        {/* CONTENT */}
+        <div className="relative z-20 flex min-h-[100svh] items-center justify-center">
+          <div className="w-full max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-18">
+            <div className="flex flex-col items-center text-center">
+              {/* BADGE */}
+              <motion.div
+                initial={{ opacity: 0, y: 40 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.7 }}
+                className="inline-flex items-center justify-center gap-2 rounded-full border border-orange-500/20 bg-orange-500/10 backdrop-blur-xl px-4 sm:px-6 py-2.5 sm:py-3 mb-6 sm:mb-8"
               >
-                <span className="absolute inset-0 bg-white/10 translate-y-full group-hover:translate-y-0 transition-all duration-300" />
+                <BadgeCheck className="w-4 h-4 sm:w-5 sm:h-5 text-orange-500 shrink-0" />
 
-                <span className="relative z-10">
-                  Explore Products
+                <span className="text-[10px] sm:text-xs md:text-sm uppercase tracking-[1px] sm:tracking-[3px] text-gray-100 font-semibold">
+                  Trusted Industrial Raw Material Supplier
                 </span>
+              </motion.div>
 
-                <ArrowRight
-                  size={18}
-                  className="relative z-10 group-hover:translate-x-1 transition-all duration-300"
-                />
-              </Link>
-
-              {/* Secondary Button */}
-              <a
-                href="tel:+918373912012"
-                className="group flex items-center gap-3 border-2 border-zinc-300 hover:border-orange-500 bg-white hover:bg-orange-50 px-8 py-5 rounded-2xl text-[#111111] uppercase tracking-[2px] font-bold transition-all duration-300 shadow-lg"
+              {/* HEADING */}
+              <motion.h1
+                initial={{ opacity: 0, y: 60 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.2, duration: 0.8 }}
+                className="max-w-6xl text-4xl xs:text-5xl sm:text-6xl md:text-7xl xl:text-8xl font-black uppercase leading-[1.05] text-white"
               >
-                <Phone
-                  size={18}
-                  className="text-orange-500"
-                />
+                Welcome To
 
-                Call Now
-              </a>
-            </motion.div>
+                <span className="block text-orange-500 mt-2 sm:mt-4">
+                  SHREE MARUTI STEEL
+                </span>
+              </motion.h1>
 
-            {/* Stats */}
-            <motion.div
-              initial={{ opacity: 0, y: 40 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.4, duration: 0.5 }}
-              className="grid grid-cols-1 sm:grid-cols-3 gap-5 mt-16"
-            >
-              {[
-                ["15+", "Years Experience"],
-                ["500+", "Industrial Clients"],
-                ["1000+", "Products Available"],
-              ].map((item, index) => (
-                <div
-                  key={index}
-                  className="group bg-white border border-zinc-200 hover:border-orange-300 rounded-3xl p-7 shadow-lg hover:shadow-orange-100 transition-all duration-300"
+              {/* DESCRIPTION */}
+              <motion.p
+                initial={{ opacity: 0, y: 40 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.4, duration: 0.8 }}
+                className="mt-6 sm:mt-8 max-w-3xl text-sm sm:text-base md:text-lg xl:text-xl leading-relaxed text-gray-300 px-1"
+              >
+                Leading Manufacturers, Importers, Stockists & Suppliers of
+                Stainless Steel Pipes, Plates, Fittings, Valves & Industrial
+                Raw Materials across India with premium quality standards.
+              </motion.p>
+
+              {/* FEATURES */}
+              <motion.div
+                initial={{ opacity: 0, y: 40 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.6, duration: 0.8 }}
+                className="mt-8 sm:mt-10 flex flex-wrap justify-center gap-3 sm:gap-4 max-w-4xl"
+              >
+                {[
+                  "15+ Years Experience",
+                  "ASTM / IS Standard",
+                  "PAN India Supply",
+                ].map((item, index) => (
+                  <div
+                    key={index}
+                    className="flex items-center gap-2 rounded-2xl border border-white/10 bg-white/10 backdrop-blur-md px-4 sm:px-5 py-2.5 sm:py-3"
+                  >
+                    <ShieldCheck className="w-4 h-4 sm:w-5 sm:h-5 text-orange-500 shrink-0" />
+
+                    <span className="text-[11px] sm:text-sm font-medium text-white whitespace-nowrap">
+                      {item}
+                    </span>
+                  </div>
+                ))}
+              </motion.div>
+
+              {/* BUTTONS */}
+              <motion.div
+                initial={{ opacity: 0, y: 40 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.8, duration: 0.8 }}
+                className="mt-10 sm:mt-12 flex w-full flex-col sm:flex-row items-center justify-center gap-4 sm:gap-5"
+              >
+                {/* BUTTON 1 */}
+                <Link
+                  href="/products"
+                  className="group inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-2xl bg-orange-500 hover:bg-orange-600 px-6 sm:px-9 py-3.5 sm:py-4 text-sm sm:text-base font-semibold text-white transition-all duration-300 shadow-[0_15px_40px_rgba(249,115,22,0.25)]"
                 >
-                  <h3 className="text-4xl font-black text-orange-500">
-                    {item[0]}
-                  </h3>
+                  Explore Products
 
-                  <p className="text-zinc-500 text-sm uppercase tracking-[2px] mt-3 leading-relaxed">
-                    {item[1]}
-                  </p>
-                </div>
-              ))}
-            </motion.div>
+                  <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform duration-300" />
+                </Link>
+
+                {/* BUTTON 2 */}
+                <a
+                  href="https://wa.me/918373912012"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-2xl border border-white/15 bg-white/5 hover:bg-orange-500 hover:border-orange-500 px-6 sm:px-9 py-3.5 sm:py-4 text-sm sm:text-base font-semibold text-white backdrop-blur-md transition-all duration-300"
+                >
+                  <Phone className="w-4 h-4 sm:w-5 sm:h-5" />
+
+                  <span>Send Message</span>
+
+                  <span className="hidden sm:block text-orange-300 group-hover:text-white transition-colors duration-300">
+                    +91 83739 12012
+                  </span>
+                </a>
+              </motion.div>
+
+              {/* MOBILE PHONE TEXT */}
+              <div className="sm:hidden mt-3 text-orange-300 text-sm font-medium">
+                +91 83739 12012
+              </div>
+
+              
+            </div>
           </div>
-
-          {/* Right Image */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.85 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6 }}
-            className="relative"
-          >
-            {/* Decorative Card */}
-            <div className="absolute top-10 -left-8 bg-white border border-zinc-200 shadow-2xl rounded-3xl p-5 z-20 hidden lg:block">
-              <p className="text-sm uppercase tracking-[3px] text-zinc-500 font-semibold">
-                Premium Quality
-              </p>
-
-              <h4 className="text-2xl font-black text-orange-500 mt-2">
-                Industrial Steel
-              </h4>
-            </div>
-
-            {/* Image Wrapper */}
-            <div className="relative rounded-[40px] overflow-hidden shadow-[0_30px_80px_rgba(0,0,0,0.15)] border border-white/50">
-              <Image
-                src="https://images.unsplash.com/photo-1565008447742-97f6f38c985c?q=80&w=1400&auto=format&fit=crop"
-                alt="Industrial Steel Products"
-                width={700}
-                height={850}
-                priority
-                className="w-full h-[500px] lg:h-[700px] object-cover"
-              />
-
-              {/* Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-black/5 to-transparent" />
-            </div>
-
-            {/* Floating Badge */}
-            <div className="absolute bottom-8 right-8 bg-white backdrop-blur-xl border border-white/50 rounded-3xl shadow-2xl px-8 py-5">
-              <h3 className="text-3xl font-black text-orange-500">
-                100%
-              </h3>
-
-              <p className="text-zinc-500 uppercase tracking-[2px] text-sm font-semibold mt-1">
-                Quality Assurance
-              </p>
-            </div>
-          </motion.div>
         </div>
       </div>
     </section>
