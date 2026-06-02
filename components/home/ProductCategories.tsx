@@ -17,91 +17,91 @@ const products = [
   },
   {
     title: "M.S. / G.I. ERW Pipes",
-    image: "/Product/product2.jpg",
+    image: "/Product/Product2.jpg",
   },
   {
     title: "C.S. Seamless Pipes",
-    image: "/Product/product3.jpg",
+    image: "/Product/Product3.jpg",
   },
   {
     title: "Alloy Steel Pipes",
-    image: "/Product/product4.jpg",
+    image: "/Product/Product4.jpg",
   },
   {
     title: "Stainless Steel Plates",
-    image: "/Product/product5.jpg",
+    image: "/Product/Product5.jpg",
   },
   {
     title: "Boiler Steel Plates",
-    image: "/Product/product6.jpg",
+    image: "/Product/Product6.jpg",
   },
   {
     title: "S.S. Pipe Fittings",
-    image: "/Product/product7.jpg",
+    image: "/Product/Product7.jpg",
   },
   {
     title: "C.S. Pipe Fittings",
-    image: "/Product/product8.jpg",
+    image: "/Product/Product8.jpg",
   },
   {
     title: "Industrial Valves",
-    image: "/Product/product9.jpg",
+    image: "/Product/Product9.jpg",
   },
   {
     title: "Hydraulic Tube Fittings",
-    image: "/Product/product10.jpg",
+    image: "/Product/Product10.jpg",
   },
   {
     title: "Nut Bolt & Washer",
-    image: "/Product/product11.jpg",
+    image: "/Product/Product11.jpg",
   },
   {
     title: "Fire Safety Equipment",
-    image: "/Product/product12.jpg",
+    image: "/Product/Product12.jpg",
   },
   {
     title: "Hand Tools",
-    image: "/Product/product13.jpg",
+    image: "/Product/Product13.jpg",
   },
   {
     title: "Brass Fittings",
-    image: "/Product/product14.jpg",
+    image: "/Product/Product14.jpg",
   },
   {
     title: "Copper Fittings",
-    image: "/Product/product15.jpg",
+    image: "/Product/Product15.jpg",
   },
   {
     title: "Pressure Gauges",
-    image: "/Product/product16.jpg",
+    image: "/Product/Product16.jpg",
   },
   {
     title: "Temperature Gauges",
-    image: "/Product/product17.jpg",
+    image: "/Product/Product17.jpg",
   },
   {
     title: "Gauge Accessories",
-    image: "/Product/product18.jpg",
+    image: "/Product/Product18.jpg",
   },
   {
     title: "Bearings",
-    image: "/Product/product19.jpg",
+    image: "/Product/Product19.jpg",
   },
   {
     title: "Bushings",
-    image: "/Product/product20.jpg",
+    image: "/Product/Product20.jpg",
   },
   {
     title: "Threaded Rod",
-    image: "/Product/product21.jpg",
+    image: "/Product/Product21.jpg",
   },
   {
     title: "Rivets",
-    image: "/Product/product22.jpg",
+    image: "/Product/Product22.jpg",
   },
   {
     title: "Wire Products",
-    image: "/Product/product23.jpg",
+    image: "/Product/Product23.jpg",
   },
 ];
 

@@ -44,7 +44,7 @@ export const products = [
     description:
       "Industrial ERW pipes including square, rectangular and round pipe solutions as per IS standards.",
     icon: Cylinder,
-    image: "/Product/product2.jpg",
+    image: "/Product/Product2.jpg",
 
     specs: {
       size: '1/2" to 36"',
@@ -70,7 +70,7 @@ export const products = [
     description:
       "Heavy-duty carbon steel ERW & seamless boiler tubes for industrial and engineering projects.",
     icon: Cylinder,
-    image: "/Product/product3.jpg",
+    image: "/Product/Product3.jpg",
 
     specs: {
       size: '1/2" to 36"',
@@ -90,7 +90,7 @@ export const products = [
     description:
       "Premium alloy steel seamless pipes suitable for IBR & non-IBR industrial applications.",
     icon: Cylinder,
-    image: "/Product/product4.jpg",
+    image: "/Producct/Product4.jpg",
 
     specs: {
       size: '1/2" to 18"',
@@ -125,7 +125,7 @@ export const products = [
     description:
       "Boiler quality steel plates, channels, beams and structural steel products.",
     icon: LayoutPanelTop,
-    image: "/Product/product6.jpg",
+    image: "/Product/Product6.jpg",
 
     specs: {
       thickness: "3mm to 150mm",
@@ -142,7 +142,7 @@ export const products = [
     description:
       "Stainless steel welded & seamless pipe fittings conforming to A403 / A182F standards.",
     icon: Settings2,
-    image: "/Product/product7.jpg",
+    image: "/Product/Product7.jpg",
 
     specs: {
       grades: ["304", "316"],
@@ -155,7 +155,7 @@ export const products = [
     description:
       "Carbon steel fittings, flanges and welded industrial connection solutions.",
     icon: Settings2,
-    image: "/Product/product8.jpg",
+    image: "/Product/Product8.jpg",
 
     specs: {
       standards: ["A234", "A105", "IS2062"],
@@ -174,7 +174,7 @@ export const products = [
     description:
       "Ball valves, gate valves, globe valves, safety valves and check valves.",
     icon: CircleGauge,
-    image: "/Product/product9.jpg",
+    image: "/Product/Product9.jpg",
 
     specs: {
       make: [
@@ -194,7 +194,7 @@ export const products = [
     description:
       "Hydraulic tube fittings for instrumentation & pneumatic control systems.",
     icon: Wrench,
-    image: "/Product/product10.jpg",
+    image: "/Product/Product10.jpg",
 
     specs: {
       materials: ["S.S.", "M.S.", "Brass"],
@@ -206,7 +206,7 @@ export const products = [
     description:
       "Industrial fasteners including washers, bolts, threaded rods and rivets.",
     icon: Bolt,
-    image: "/Product/product11.jpg",
+    image: "/Product/Product11.jpg",
 
     specs: {
       grades: [
@@ -231,7 +231,7 @@ export const products = [
     description:
       "Industrial fire protection systems, PPE safety gear and emergency solutions.",
     icon: Flame,
-    image: "/Product/product12.jpg",
+    image: "/Product/Product12.jpg",
 
     specs: {
       products: [
@@ -248,7 +248,7 @@ export const products = [
     description:
       "Professional industrial hand tools and engineering workshop equipment.",
     icon: HardHat,
-    image: "/Product/product13.jpg",
+    image: "/Product/Product13.jpg",
 
     specs: {
       tools: [
@@ -265,7 +265,7 @@ export const products = [
     description:
       "Industrial brass fittings for piping and engineering applications.",
     icon: Pipette,
-    image: "/Product/product14.jpg",
+    image: "/Product/Product14.jpg",
 
     specs: {
       materials: ["Brass"],
@@ -282,7 +282,7 @@ export const products = [
     description:
       "Premium copper fittings and industrial piping accessories.",
     icon: Cable,
-    image: "/Product/product15.jpg",
+    image: "/Product/Product15.jpg",
 
     specs: {
       materials: ["Copper"],
@@ -299,7 +299,7 @@ export const products = [
     description:
       "Industrial pressure gauges and instrumentation monitoring systems.",
     icon: Gauge,
-    image: "/Product/product16.jpg",
+    image: "/Product/Product16.jpg",
 
     specs: {
       types: [
@@ -315,7 +315,7 @@ export const products = [
     description:
       "Accurate industrial temperature gauges for monitoring and process control.",
     icon: Thermometer,
-    image: "/Product/product17.jpg",
+    image: "/Product/Product17.jpg",
 
     specs: {
       types: [
@@ -331,7 +331,7 @@ export const products = [
     description:
       "Gauge accessories and instrumentation support products for industries.",
     icon: Gauge,
-    image: "/Product/product18.jpg",
+    image: "/Product/Product18.jpg",
 
     specs: {
       products: [
@@ -348,7 +348,7 @@ export const products = [
     description:
       "Industrial bearings for heavy-duty engineering and machinery systems.",
     icon: Cog,
-    image: "/Product/product19.jpg",
+    image: "/Product/Product19.jpg",
 
     specs: {
       types: [
@@ -364,7 +364,7 @@ export const products = [
     description:
       "Precision industrial bushings for engineering and machine applications.",
     icon: Cog,
-    image: "/Product/product20.jpg",
+    image: "/Product/Product20.jpg",
 
     specs: {
       applications: [
@@ -380,7 +380,7 @@ export const products = [
     description:
       "Heavy-duty threaded rods for industrial fastening applications.",
     icon: Drill,
-    image: "/Product/product21.jpg",
+    image: "/Product/Product21.jpg",
 
     specs: {
       materials: [
@@ -396,7 +396,7 @@ export const products = [
     description:
       "Industrial rivets and fastening solutions for fabrication industries.",
     icon: Bolt,
-    image: "/Product/product22.jpg",
+    image: "/Product/Product22.jpg",
 
     specs: {
       types: [
@@ -412,7 +412,7 @@ export const products = [
     description:
       "Industrial wire products and metal wire engineering solutions.",
     icon: ShieldCheck,
-    image: "/Product/product23.jpg",
+    image: "/Product/Product23.jpg",
 
     specs: {
       materials: [
