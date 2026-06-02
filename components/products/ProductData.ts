@@ -104,7 +104,7 @@ export const products = [
     description:
       "Industrial stainless steel sheets, coils and heavy-duty plates for fabrication industries.",
     icon: LayoutPanelTop,
-    image: "/Product/product5.jpg",
+    image: "/Product/Product5.jpg",
 
     specs: {
       thickness: "1mm to 100mm",
