@@ -100,10 +100,10 @@ const Navbar = () => {
                 <div className="flex items-center gap-3">
                   <div className="relative w-[45px] h-[45px]">
                     <Image
-                      src="/logo.png"
+                      src="/logo.jpeg"
                       alt="Logo"
                       fill
-                      className="object-contain"
+                      className="object-contain rounded-xl"
                     />
                   </div>
 
