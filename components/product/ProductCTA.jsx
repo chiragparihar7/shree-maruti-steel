@@ -182,7 +182,7 @@ export default function ProductCTA() {
                     </p>
 
                     <h4 className="mt-2 break-all text-xl font-black text-white">
-                      info@yourcompany.com
+                    shreemarutisteel7@gmail.com
                     </h4>
 
                     <p className="mt-2 text-sm leading-7 text-slate-400">
@@ -203,7 +203,7 @@ export default function ProductCTA() {
                     </p>
 
                     <h4 className="mt-2 text-xl font-black text-white">
-                      Ahmedabad, Gujarat
+                    Shop No. 01, Jindal Colony, Opp. JK Dharam Kata, Main Dadri Road, Surajpur, Greater Noida, U.P.
                     </h4>
 
                     <p className="mt-2 text-sm leading-7 text-slate-400">
