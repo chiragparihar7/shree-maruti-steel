@@ -1,3 +1,4 @@
+
 "use client";
 
 import Image from "next/image";
@@ -13,94 +14,117 @@ import {
 const products = [
   {
     title: "Stainless Steel Pipes",
+    slug: "stainless-steel-pipes",
     image: "/Product/product1.jpg",
   },
   {
     title: "M.S. / G.I. ERW Pipes",
+    slug: "ms-gi-erw-pipes",
     image: "/Product/Product2.jpg",
   },
   {
     title: "C.S. Seamless Pipes",
+    slug: "cs-seamless-pipes",
     image: "/Product/Product3.jpg",
   },
   {
     title: "Alloy Steel Pipes",
+    slug: "alloy-steel-pipes",
     image: "/Product/Product4.jpg",
   },
   {
     title: "Stainless Steel Plates",
+    slug: "stainless-steel-plates",
     image: "/Product/Product5.jpg",
   },
   {
     title: "Boiler Steel Plates",
+    slug: "boiler-steel-plates",
     image: "/Product/Product6.jpg",
   },
   {
     title: "S.S. Pipe Fittings",
+    slug: "ss-pipe-fittings",
     image: "/Product/Product7.jpg",
   },
   {
     title: "C.S. Pipe Fittings",
+    slug: "cs-pipe-fittings",
     image: "/Product/Product8.jpg",
   },
   {
     title: "Industrial Valves",
+    slug: "industrial-valves",
     image: "/Product/Product9.jpg",
   },
   {
     title: "Hydraulic Tube Fittings",
+    slug: "hydraulic-tube-fittings",
     image: "/Product/Product10.jpg",
   },
   {
     title: "Nut Bolt & Washer",
+    slug: "nut-bolt-washer",
     image: "/Product/Product11.jpg",
   },
   {
     title: "Fire Safety Equipment",
+    slug: "fire-safety-equipment",
     image: "/Product/Product12.jpg",
   },
   {
     title: "Hand Tools",
+    slug: "hand-tools",
     image: "/Product/Product13.jpg",
   },
   {
     title: "Brass Fittings",
+    slug: "brass-fittings",
     image: "/Product/Product14.jpg",
   },
   {
     title: "Copper Fittings",
+    slug: "copper-fittings",
     image: "/Product/Product15.jpg",
   },
   {
     title: "Pressure Gauges",
+    slug: "pressure-gauges",
     image: "/Product/Product16.jpg",
   },
   {
     title: "Temperature Gauges",
+    slug: "temperature-gauges",
     image: "/Product/Product17.jpg",
   },
   {
     title: "Gauge Accessories",
+    slug: "gauge-accessories",
     image: "/Product/Product18.jpg",
   },
   {
     title: "Bearings",
+    slug: "bearings",
     image: "/Product/Product19.jpg",
   },
   {
     title: "Bushings",
+    slug: "bushings",
     image: "/Product/Product20.jpg",
   },
   {
     title: "Threaded Rod",
+    slug: "threaded-rod",
     image: "/Product/Product21.jpg",
   },
   {
     title: "Rivets",
+    slug: "rivets",
     image: "/Product/Product22.jpg",
   },
   {
     title: "Wire Products",
+    slug: "wire-products",
     image: "/Product/Product23.jpg",
   },
 ];
@@ -159,61 +183,75 @@ const ProductCategories = () => {
               viewport={{ once: true }}
               className="group"
             >
-              {/* CARD */}
-              <div className="relative overflow-hidden rounded-[28px] sm:rounded-[35px] bg-white shadow-[0_15px_50px_rgba(0,0,0,0.08)] hover:shadow-[0_25px_70px_rgba(0,0,0,0.14)] transition-all duration-500 h-full">
-                {/* IMAGE */}
-                <div className="relative overflow-hidden h-[260px] sm:h-[320px]">
-                  <Image
-                    src={item.image}
-                    alt={item.title}
-                    fill
-                    className="object-cover group-hover:scale-110 transition-all duration-700"
-                  />
+              <Link href={`/products/${item.slug}`}>
+                {/* CARD */}
+                <div className="relative overflow-hidden rounded-[28px] sm:rounded-[35px] bg-white shadow-[0_15px_50px_rgba(0,0,0,0.08)] hover:shadow-[0_25px_70px_rgba(0,0,0,0.14)] transition-all duration-500 h-full cursor-pointer">
+                  
+                  {/* IMAGE */}
+                  <div className="relative overflow-hidden h-[260px] sm:h-[320px]">
+                    <Image
+                      src={item.image}
+                      alt={item.title}
+                      fill
+                      className="object-cover group-hover:scale-110 transition-all duration-700"
+                    />
 
-                  {/* OVERLAY */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/25 via-black/20 to-transparent" />
-                </div>
-
-                {/* NUMBER */}
-                <div className="absolute top-5 left-5 sm:top-6 sm:left-6 w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-white/15 backdrop-blur-xl border border-white/20 flex items-center justify-center">
-                  <span className="text-white font-black text-base sm:text-lg">
-                    {String(index + 1).padStart(2, "0")}
-                  </span>
-                </div>
-
-                {/* CONTENT */}
-                <div className="absolute bottom-0 left-0 w-full p-5 sm:p-7">
-                  {/* LABEL */}
-                  <span className="text-orange-400 uppercase tracking-[2px] sm:tracking-[3px] text-[10px] sm:text-xs font-bold">
-                    Industrial Product
-                  </span>
-
-                  {/* TITLE */}
-                  <h3 className="text-2xl sm:text-3xl font-black uppercase text-white leading-tight mt-3">
-                    {item.title}
-                  </h3>
-
-                  {/* BUTTONS */}
-                  <div className="flex flex-col sm:flex-row gap-3 mt-5">
-                    {/* VIEW */}
-                   
-                    {/* MESSAGE */}
-                    <a
-                      href={`https://wa.me/918373912012?text=Hello%20I%20want%20information%20about%20${item.title}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center justify-center gap-2 rounded-xl border border-white/20 bg-white/10 hover:bg-white hover:text-orange-500 backdrop-blur-xl px-4 py-3 text-white text-xs sm:text-sm font-bold uppercase tracking-[1px] transition-all duration-300"
-                    >
-                      <MessageCircle size={16} />
-
-                      Message
-                    </a>
+                    {/* OVERLAY */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/25 via-black/20 to-transparent" />
                   </div>
-                </div>
 
-                {/* HOVER BORDER */}
-                <div className="absolute inset-0 rounded-[28px] sm:rounded-[35px] border-2 border-transparent group-hover:border-orange-300 transition-all duration-500 pointer-events-none" />
-              </div>
+                  {/* NUMBER */}
+                  <div className="absolute top-5 left-5 sm:top-6 sm:left-6 w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-white/15 backdrop-blur-xl border border-white/20 flex items-center justify-center">
+                    <span className="text-white font-black text-base sm:text-lg">
+                      {String(index + 1).padStart(2, "0")}
+                    </span>
+                  </div>
+
+                  {/* CONTENT */}
+                  <div className="absolute bottom-0 left-0 w-full p-5 sm:p-7">
+                    
+                    {/* LABEL */}
+                    <span className="text-orange-400 uppercase tracking-[2px] sm:tracking-[3px] text-[10px] sm:text-xs font-bold">
+                      Industrial Product
+                    </span>
+
+                    {/* TITLE */}
+                    <h3 className="text-2xl sm:text-3xl font-black uppercase text-white leading-tight mt-3">
+                      {item.title}
+                    </h3>
+
+                    {/* BUTTONS */}
+                    <div className="flex flex-col sm:flex-row gap-3 mt-5">
+                      
+                      {/* VIEW DETAILS */}
+                      <span className="inline-flex items-center justify-center gap-2 rounded-xl bg-orange-500 hover:bg-orange-600 px-4 py-3 text-white text-xs sm:text-sm font-bold uppercase tracking-[1px] transition-all duration-300">
+                        View Details
+
+                        <ArrowRight
+                          size={16}
+                          className="group-hover:translate-x-1 transition-all duration-300"
+                        />
+                      </span>
+
+                      {/* MESSAGE */}
+                      <a
+                        href={`https://wa.me/918373912012?text=Hello%20I%20want%20information%20about%20${item.title}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        onClick={(e) => e.stopPropagation()}
+                        className="inline-flex items-center justify-center gap-2 rounded-xl border border-white/20 bg-white/10 hover:bg-white hover:text-orange-500 backdrop-blur-xl px-4 py-3 text-white text-xs sm:text-sm font-bold uppercase tracking-[1px] transition-all duration-300"
+                      >
+                        <MessageCircle size={16} />
+
+                        Message
+                      </a>
+                    </div>
+                  </div>
+
+                  {/* HOVER BORDER */}
+                  <div className="absolute inset-0 rounded-[28px] sm:rounded-[35px] border-2 border-transparent group-hover:border-orange-300 transition-all duration-500 pointer-events-none" />
+                </div>
+              </Link>
             </motion.div>
           ))}
         </div>
@@ -242,3 +280,4 @@ const ProductCategories = () => {
 };
 
 export default ProductCategories;
+

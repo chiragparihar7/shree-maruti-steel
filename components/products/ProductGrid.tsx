@@ -1,6 +1,9 @@
 "use client";
 
+import Link from "next/link";
+
 import { motion } from "framer-motion";
+
 import {
   ArrowRight,
   Sparkles,
@@ -85,7 +88,7 @@ const ProductGrid = () => {
         </motion.div>
 
         {/* PRODUCT GRID */}
-        <div className="relative mt-16">
+        <div className="relative mt-20">
           {/* SIDE BLUR */}
           <div className="absolute -left-24 top-20 h-60 w-60 rounded-full bg-orange-300/10 blur-[120px]" />
 
@@ -93,13 +96,100 @@ const ProductGrid = () => {
 
           <div className="relative z-10 grid gap-7 sm:grid-cols-2 xl:grid-cols-3">
             {products.map((product, index) => (
-              <ProductCard
+              <motion.div
                 key={index}
-                title={product.title}
-                description={product.description}
-                image={product.image}
-                icon={product.icon}
-              />
+                initial={{ opacity: 0, y: 60 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{
+                  duration: 0.6,
+                  delay: index * 0.08,
+                }}
+                viewport={{ once: true }}
+                className="group"
+              >
+                {/* CARD LINK */}
+                <Link
+                  href={`/products/${product.slug}`}
+                  className="block h-full"
+                >
+                  <div className="relative h-full overflow-hidden rounded-[34px] border border-orange-100/70 bg-white/80 shadow-[0_20px_70px_rgba(249,115,22,0.08)] backdrop-blur-xl transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_30px_90px_rgba(249,115,22,0.18)]">
+                    {/* CARD GLOW */}
+                    <div className="absolute -right-16 -top-16 h-40 w-40 rounded-full bg-orange-300/20 blur-[90px]" />
+
+                    {/* IMAGE */}
+                    <div className="relative overflow-hidden">
+                      <img
+                        src={product.image}
+                        alt={product.title}
+                        className="h-[260px] w-full object-cover transition-all duration-700 group-hover:scale-110"
+                      />
+
+                      {/* OVERLAY */}
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
+
+                      {/* ICON */}
+                      <div className="flex h-16 w-16 items-center justify-center rounded-2xl border border-white/20 bg-white/10 backdrop-blur-xl">
+
+<ShieldCheck className="h-8 w-8 text-white" />
+
+</div>
+
+                      {/* CATEGORY */}
+                      <div className="absolute bottom-6 left-6 rounded-full border border-white/20 bg-white/10 px-4 py-2 backdrop-blur-xl">
+                        <span className="text-xs font-bold uppercase tracking-[2px] text-white">
+                          {product.category || "Industrial"}
+                        </span>
+                      </div>
+                    </div>
+
+                    {/* CONTENT */}
+                    <div className="relative p-7">
+                      {/* TITLE */}
+                      <h3 className="text-2xl font-black leading-tight text-zinc-900 transition-all duration-300 group-hover:text-orange-600">
+                        {product.title}
+                      </h3>
+
+                      {/* SHORT DESCRIPTION */}
+                      <p className="mt-4 line-clamp-3 text-sm leading-7 text-zinc-600">
+                        {product.shortDescription ||
+                          product.description}
+                      </p>
+
+                      {/* FEATURES */}
+                      {product.features && (
+                        <div className="mt-6 flex flex-wrap gap-2">
+                          {product.features
+                            .slice(0, 3)
+                            .map((feature, i) => (
+                              <span
+                                key={i}
+                                className="rounded-full bg-orange-50 px-3 py-1 text-xs font-semibold text-orange-600"
+                              >
+                                {feature}
+                              </span>
+                            ))}
+                        </div>
+                      )}
+
+                      {/* BUTTON */}
+                      <div className="mt-8 flex items-center justify-between">
+                        <div className="flex items-center gap-2 text-sm font-bold uppercase tracking-[2px] text-orange-600">
+                          View Details
+
+                          <ArrowRight className="h-4 w-4 transition-all duration-300 group-hover:translate-x-1" />
+                        </div>
+
+                        <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-r from-orange-500 to-orange-600 text-white shadow-lg shadow-orange-200 transition-all duration-500 group-hover:rotate-6 group-hover:scale-110">
+                          <ArrowRight className="h-5 w-5" />
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* BORDER HOVER */}
+                    <div className="absolute inset-0 rounded-[34px] border border-transparent transition-all duration-500 group-hover:border-orange-300/70" />
+                  </div>
+                </Link>
+              </motion.div>
             ))}
           </div>
         </div>
@@ -110,7 +200,7 @@ const ProductGrid = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.1 }}
           viewport={{ once: true }}
-          className="relative mt-20 overflow-hidden rounded-[36px] border border-orange-100 bg-white/80 p-8 shadow-[0_20px_80px_rgba(249,115,22,0.10)] backdrop-blur-xl sm:p-10 lg:p-14"
+          className="relative mt-24 overflow-hidden rounded-[40px] border border-orange-100 bg-white/80 p-8 shadow-[0_20px_80px_rgba(249,115,22,0.10)] backdrop-blur-xl sm:p-10 lg:p-14"
         >
           {/* CARD GLOW */}
           <div className="absolute left-0 top-0 h-52 w-52 rounded-full bg-orange-300/20 blur-[100px]" />
@@ -144,13 +234,15 @@ const ProductGrid = () => {
 
             {/* BUTTON */}
             <div className="flex-shrink-0">
-              <button className="group inline-flex items-center gap-3 rounded-2xl bg-gradient-to-r from-orange-500 to-orange-600 px-7 py-4 text-sm font-bold uppercase tracking-[1px] text-white shadow-[0_15px_50px_rgba(249,115,22,0.35)] transition-all duration-500 hover:scale-[1.03] hover:shadow-[0_20px_60px_rgba(249,115,22,0.45)]">
-                Request Quotation
+              <Link href="/contact">
+                <button className="group inline-flex items-center gap-3 rounded-2xl bg-gradient-to-r from-orange-500 to-orange-600 px-7 py-4 text-sm font-bold uppercase tracking-[1px] text-white shadow-[0_15px_50px_rgba(249,115,22,0.35)] transition-all duration-500 hover:scale-[1.03] hover:shadow-[0_20px_60px_rgba(249,115,22,0.45)]">
+                  Request Quotation
 
-                <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-white/10 backdrop-blur-xl transition-all duration-500 group-hover:bg-white/20">
-                  <ArrowRight className="h-5 w-5 transition-transform duration-500 group-hover:translate-x-1" />
-                </span>
-              </button>
+                  <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-white/10 backdrop-blur-xl transition-all duration-500 group-hover:bg-white/20">
+                    <ArrowRight className="h-5 w-5 transition-transform duration-500 group-hover:translate-x-1" />
+                  </span>
+                </button>
+              </Link>
             </div>
           </div>
         </motion.div>
